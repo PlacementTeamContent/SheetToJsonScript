@@ -1,5 +1,5 @@
 function convertSpreadsheetToJson() {
-var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("sheet_name"); //Update with your sheet name 
+var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("App Script Test");
 var data = sheet.getDataRange().getValues();
 
 var questions = [];
@@ -77,7 +77,7 @@ currentQuestion = {
 "IN_OFFLINE_EXAM",
 "TOPIC_DSA_CODING",
 "SOURCE_NI_ASSESMENT",
-"SUB_TOPIC_ARRAYS",
+"SUB_TOPIC_"+ row[4].toUpperCase() || "",
 "COMPANY_UNKNOWN",
 new_id
         ],
@@ -144,6 +144,11 @@ file_name = "main.c";
 execute_file_path = "main.c";
 submit_file_path = "Solution.c";
 break;
+case "JAVASCRIPT":
+file_name = "main.js";
+execute_file_path = "main.js";
+submit_file_path = "Solution.js";
+break;
 default:
 file_name = "Main.java";
 execute_file_path = "Main.java";
@@ -159,7 +164,7 @@ currentQuestion.language_code_repository_details.push({
           {
 "file_name": file_name,
 "file_type": "FILE",
-"file_content": row[13] || ""
+"file_content": Utilities.base64Encode(row[13]) || ""
           }
         ]
       });

@@ -1,9 +1,7 @@
 # SheetToJsonScript
 
-1)This Appscript file is used for uploading function based coding questions.This Appscript works for the Questions sent by Outside Sources
-
-2)In this after the creation of JSON file , add 8 tag_names properly.
-
-3)In language_code_repository_details , Code_data won't be encrypted. Before uploading Json into backend, make sure the code is in encrypted form(Use Base64ENCODE.org).
-
-4)Make sure in solution tag data is proper.
+1)This Appscript file is used for uploading function-based coding questions.
+2)Rename the sheet in the second line of the app script
+3)Make sure the sheet is in the proper format and the data is placed correctly.
+4)In language_code_repository_details, Code_data will be automatically encrypted into Base64 format
+5)Just save the app script in the extensions and run it. It will provide a file link that contains the uploadable JSON.
